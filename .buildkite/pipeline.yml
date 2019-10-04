@@ -44,6 +44,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   - label: Build web3 gateway
     command:
@@ -61,6 +63,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   - label: Build runtime (ELF)
     command:
@@ -78,6 +82,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   - label: Build runtime (SGXS)
     command:
@@ -95,6 +101,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   # Wait for all jobs defined before this point
   # to finish running in parallel before continuing.
@@ -124,6 +132,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   # TODO: figure out a way to start running the
   #       end-to-end tests as soon as its dependencies
@@ -162,6 +172,8 @@ steps:
       buildkite_agent_size: large
     plugins:
       <<: *docker_plugin_configuration
+    agents:
+      queue: staging-test
 
   - wait
 
