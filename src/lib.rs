@@ -10,6 +10,7 @@ extern crate ethkey;
 extern crate serde_json;
 
 pub mod block;
+pub mod dispatcher;
 pub mod methods;
 
 #[cfg(feature = "test")]
