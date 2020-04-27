@@ -16,3 +16,6 @@ oasis-core-keymanager-api-common = { git = "https://github.com/oasislabs/oasis-c
 
 [build-dependencies]
 oasis-core-tools = { git = "https://github.com/oasislabs/oasis-core", tag = "v20.5.1" }
+
+[features]
+benchmarking = []
